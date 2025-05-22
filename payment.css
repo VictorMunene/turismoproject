@@ -1,0 +1,411 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'aptos', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logo small {
+    font-size: 0.7rem;
+    color: #7f8c8d;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+nav ul li a.active {
+    color: green;
+    font-weight: 600;
+}
+
+nav ul li.phone a {
+    color: green;
+    font-weight: 600;
+    border: green solid 1.5px;
+    border-radius: 7px;
+    padding: 7px;
+    transition: all 0.3s;
+}
+
+nav ul li.phone i {
+    margin-right: 5px;
+}
+
+nav ul li.phone
+a:hover {
+    background-color: green;
+    color: white;
+}
+
+nav ul li.login {
+    background-color: green;
+    color: white;
+    border-radius: 7px;
+    padding: 7px;
+    transition: all 0.3s;
+}
+
+
+/* Payment Page Styles */
+.payment-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.payment-summary {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.vehicle-summary {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.vehicle-summary img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.vehicle-details {
+    flex: 1;
+}
+
+.payment-options {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.payment-methods {
+    margin: 20px 0;
+}
+
+.payment-method {
+    margin-bottom: 15px;
+}
+
+.payment-method input {
+    margin-right: 10px;
+}
+
+.payment-method label {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.payment-method label:hover {
+    border-color: #3498db;
+}
+
+.payment-method input:checked + label {
+    border-color: #3498db;
+    background-color: #f0f8ff;
+}
+
+.payment-method i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #3498db;
+}
+
+.btn-btn-primary {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.payment-details {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.card-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Payment Success Styles */
+.payment-success {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: #2ecc71;
+    margin-bottom: 20px;
+}
+
+.transaction-details {
+    text-align: left;
+    margin: 30px auto;
+    max-width: 500px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row span:first-child {
+    font-weight: bold;
+    color: #555;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .payment-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .vehicle-summary {
+        flex-direction: column;
+    }
+    
+    .vehicle-summary img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer h3 {
+    margin-bottom: 1rem;
+    color: green;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: green;
+}
+
+.footer ul li i {
+    margin-right: 0.5rem;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-column p {
+    margin-bottom: 15px;
+    color: #ecf0f1;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+    padding-left: 5px;
+}
+
+.social-links {
+    display: block;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #34495e;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

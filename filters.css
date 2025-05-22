@@ -1,0 +1,93 @@
+/* Form Group Container */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+/* Input Container with Icon */
+.input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon Styling */
+.input-icon i {
+    position: absolute;
+    left: 12px;
+    color: #7f8c8d;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+/* Select Input Styling */
+.input-icon select {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    color: #34495e;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Select Input Focus/Hover States */
+.input-icon select:hover {
+    border-color: #3498db;
+}
+
+.input-icon select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+}
+
+/* Custom Dropdown Arrow */
+.input-icon::after {
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    color: #7f8c8d;
+    pointer-events: none;
+}
+
+/* Color Coding for Different Selects */
+#fuel_type {
+    border-left: 3px solid #e67e22; /* Orange for fuel */
+}
+
+#transmission {
+    border-left: 3px solid #9b59b6; /* Purple for transmission */
+}
+
+#car_type {
+    border-left: 3px solid #2ecc71; /* Green for vehicle type */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .input-icon select {
+        padding: 10px 12px 10px 35px;
+    }
+    
+    .input-icon i {
+        left: 10px;
+        font-size: 14px;
+    }
+}
